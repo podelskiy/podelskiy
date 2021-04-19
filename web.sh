@@ -1,0 +1,1 @@
+echo "<html><body><h1>My First Heading</h1><p>My first paragraph.</p></body></html>" > index.html | while true; do nc -lp 8888 < index.html; done &
