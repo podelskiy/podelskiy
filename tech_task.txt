@@ -1,0 +1,158 @@
+#history 100
+
+vlad@debian:~/site_for_docker$ history 100
+   67  cd vms
+   68  cd
+   69  cd vms/docker
+   70  cd vms/
+   71  ls
+   72  cd
+   73  ls -lt
+   74  df -h
+   75  sudo poweroff
+   76  cd vms/docker/
+   77  docker-compose byild
+   78  docker-compose build
+   79  docker-compose ps
+   80  docker-compose --help
+   81  docker-compose stop
+   82  docker-compose ps
+   83  docker-compose up
+   84  docker-compose ps
+   85  docker-compose rm db
+   86  docker-compose build
+   87  docker-compose ps
+   88  docker-compose up
+   89  ping 8.8.8.8
+   90  sudo apt-get update
+   91  vagrant
+   92  vagrant --version
+   93  lsmod | grep kvm
+   94  apt-get vagrant
+   95  apt-get install  vagrant
+   96  sudo apt-get install  vagrant
+   97  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+   98  sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+   99  sudo apt-get update && sudo apt-get install vagrant
+  100  lsmod | grep kvm
+  101  vagrant --version
+  102  sudo systemctl all-units
+  103  sudo systemctl list-units
+  104  docker -ps
+  105  docker ps
+  106  histtory 100
+  107  history 100
+  108  docker ps -a
+  109  docker run -it --rm -d -p 8080:80 --name web nginx
+  110  docker pull nginx
+  111  docker run -it --rm -d -p 8080:80 --name web nginx
+  112  docker ps -a
+  113  curl -v -XGET http://localhost
+  114  curl -v -GET http://localhost
+  115  curl -v GET http://localhost
+  116  curl -v -XGET http://localhost:8080
+  117  docker stop web
+  118  docker ps -a
+  119  docker ps
+  120  mkdir site_for_docker
+  121  cd ./site_for_docker/
+  122  vi index.html
+  123  apt-get update
+  124  sudo apt-get update
+  125  apt install snapd
+  126  sudo apt install snapd
+  127  sudo snap install notepad-plus-plus
+   128  notepad-plus-plus
+   129  history -d 132
+   130  history -d 130
+   131  histrory
+   132  history
+   133  history -d 130
+   134  history -d 129
+   135  history
+   136  sudo snap install core
+   137  notepad-plus-plus
+   138  sudo snap install notepad-plus-plus
+   139  notepad-plus-plus
+   140  vi index.html
+   141  ll
+   142  docker run -it --rm -d -p 8080:80 --name web -v ~/site_for_docker/:usr/share/nginx/html nginx
+   143  pwd
+   144  docker run -it --rm -d -p 8080:80 --name web -v ~/site_for_docker:/usr/share/nginx/html nginx
+   145  curl -v -XGET http://localhost:8080
+   146  vi index.html
+   147  curl -v -XGET http://localhost:8080
+   148  vi index.html
+   149  docker ps -a
+   150  sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" web
+   151  ping 172.17.0.2
+   152  ssh root@172.17.0.2
+   153  history
+   154  docker stop web
+   155  docker run -it --rm -d -p 80:80 --name web -v ~/site_for_docker:/usr/share/nginx/html nginx
+   156  curl -v -XGET http://localhost:80
+   157  curl -v -XGET http://localhost
+   158  docker stop web
+   159  docker run -it --rm -d --name web -v ~/site_for_docker:/usr/share/nginx/html nginx
+   160  curl -v -XGET http://localhost
+   161  docker stop web
+   162  docker run -it --rm -d -p 80:80 --name web -v ~/site_for_docker:/usr/share/nginx/html nginx
+   163* curl -v -XGET http://localhost:
+   164  curl -v -XGET http://localhost:8080
+   165  curl -v -XGET http://localhost:80
+   166  history 100
+
+############################################
+
+
+#docker ps -a
+
+   vlad@debian:~/site_for_docker$ docker ps -a
+   CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                         PORTS                    NAMES
+   ea6e650d2599        nginx               "/docker-entrypoint.…"   4 minutes ago       Up 4 minutes                   0.0.0.0:80->80/tcp       web
+   2bdc5a6529f4        docker_db           "docker-entrypoint.s…"   16 months ago       Restarting (1) 4 seconds ago                            docker_db_1
+   7db0df3bd1e1        docker_adminer      "entrypoint.sh docke…"   16 months ago       Up 12 days                     0.0.0.0:6080->8080/tcp   docker_adminer_1
+   b903f6949fb5        adminer             "entrypoint.sh docke…"   16 months ago       Exited (0) 16 months ago                                nervous_jepsen
+   81251005bb08        vpodelskiy/myapp    "cowsay hi"              16 months ago       Exited (0) 16 months ago                                sweet_ramanujan
+   95894d805f6b        ubuntu              "bash"                   16 months ago       Exited (255) 12 days ago                                myapp
+   e78ede75363e        ubuntu              "bash"                   16 months ago       Exited (0) 16 months ago                                awesome_nightingale
+   9eb36d9b4e69        hello-world         "/hello"                 16 months ago       Exited (0) 16 months ago                                gallant_allen
+
+
+#############################################
+
+#curl -v -XGET http://localhost
+
+   vlad@debian:~/site_for_docker$ curl -v -XGET http://localhost
+Note: Unnecessary use of -X or --request, GET is already inferred.
+* Rebuilt URL to: http://localhost/
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 80 (#0)
+> GET / HTTP/1.1
+> Host: localhost
+> User-Agent: curl/7.52.1
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Server: nginx/1.21.0
+< Date: Thu, 01 Jul 2021 10:38:07 GMT
+< Content-Type: text/html
+< Content-Length: 170
+< Last-Modified: Thu, 01 Jul 2021 10:21:57 GMT
+< Connection: keep-alive
+< ETag: "60dd9745-aa"
+< Accept-Ranges: bytes
+<
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tech Task Site for Docker Nginx</title>
+</head>
+<body>
+  <h2>Hello, World!</h2>
+</body>
+</html>
+* Curl_http_done: called premature == 0
+* Connection #0 to host localhost left intact
